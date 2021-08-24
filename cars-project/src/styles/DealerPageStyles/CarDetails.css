@@ -1,0 +1,282 @@
+.car-details-container {
+  padding: 0 200px;
+  /* margin-top: 30px; */
+  margin-bottom: 40px;
+}
+.bigger-image {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.bigger-image img {
+  border-radius: 20px;
+  height: auto;
+  width: 100%;
+  padding-left: 4px;
+}
+.bigger-image-first img {
+  padding-right: 4px;
+  width: 100% !important;
+  padding-left: 0px;
+}
+@media (max-width: 1200px) {
+  .car-details-container {
+    padding: 0 20px;
+  }
+  .bigger-image-first img {
+    padding-right: 0px;
+  }
+  .bigger-image img {
+    padding: 0px 3px 0px 3px;
+  }
+}
+@media (max-width: 992px) {
+  .bigger-image img {
+    padding-bottom: 10px;
+  }
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  background: #3498db;
+  border-radius: 100%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  margin-top: -18px;
+  font-size: 10px;
+  line-height: 36px;
+  box-shadow: 0px 0px 0px 9px rgb(255 255 255 / 40%);
+}
+
+.carousel-control:hover {
+  background: #121b22;
+}
+
+.carousel-control.right i {
+  font-size: 23px;
+  margin-left: 15px;
+  margin-top: 6px;
+  color: #fff;
+}
+
+.carousel-control.left i {
+  font-size: 23px;
+  margin-left: 12px;
+  margin-top: 6px;
+  color: #fff;
+}
+
+.carousel-control.right {
+  right: 35px;
+}
+.carousel-control.left {
+  left: 35px;
+}
+
+.carousel-control.right {
+  position: absolute;
+  top: 50%;
+  right: 35px;
+}
+
+.current-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.images-panel {
+  height: 705px;
+  overflow-y: auto;
+}
+
+.images-panel > div > img {
+  cursor: pointer;
+}
+
+.images-panel > div {
+  position: relative;
+}
+
+.images-panel .active {
+  background-color: rgba(255, 255, 255, 0.445);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.current-image,
+.prev-image {
+  height: 705px;
+  object-fit: cover;
+  background-position: center;
+  /* width: 100%; */
+}
+
+.prev-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.left-enterance {
+  animation: slide-left 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  backface-visibility: hidden;
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.right-enterance {
+  animation: slide-right 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  backface-visibility: hidden;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.left-exit {
+  animation: slide-from-right 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  backface-visibility: hidden;
+}
+
+@keyframes slide-from-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.right-exit {
+  animation: slide-from-left 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  backface-visibility: hidden;
+}
+
+@keyframes slide-from-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@media screen and (max-width: 991px) {
+  .images-panel > div {
+    display: inline-block;
+    width: 120px;
+  }
+  .images-panel > div:not(:last-child) {
+    margin-right: 8px;
+  }
+  .images-panel > div > img {
+    /* width: 100%; */
+    height: 80px;
+    object-fit: contain;
+    background-position: center;
+  }
+  .images-panel {
+    /* flex-direction: row; */
+    overflow-x: auto;
+    white-space: nowrap;
+    overflow-y: hidden;
+    width: 100%;
+    height: fit-content;
+    margin: 0 15px;
+    padding: 0;
+  }
+
+  .current-image,
+  .prev-image,
+  .notfound {
+    /* max-height: 705px; */
+    height: 502px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .notfound h2 {
+    font-size: 1.1rem;
+  }
+
+  .images-panel > div {
+    width: 60px;
+  }
+  .images-panel > div > img {
+    height: 40px;
+  }
+
+  .current-image,
+  .prev-image,
+  .notfound {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .carousel-control {
+    position: absolute;
+    background: #121b227c;
+    /* background: #3498db; */
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    margin-top: -18px;
+    line-height: 25px;
+    box-shadow: none;
+  }
+  .carousel-control.right i {
+    font-size: 23px;
+    margin-left: 10px;
+    margin-top: 1px;
+    color: #fff;
+  }
+
+  .carousel-control.left i {
+    font-size: 23px;
+    margin-left: 7px;
+    margin-top: 1px;
+    color: #fff;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .notfound h2 {
+    font-size: 1.0rem;
+  }
+
+  .current-image,
+  .prev-image,
+  .notfound {
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+
+.notfound img {
+  max-width: 76%;
+  max-height: 85vh;
+  vertical-align: middle;
+  border-style: none;
+  margin-top: 74px;
+}
+
+.notfound h2 {
+  color: #F01E23;
+}

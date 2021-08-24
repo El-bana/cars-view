@@ -1,0 +1,108 @@
+.carsTable-container {
+  max-width: 1700px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.carsTable-cardContainer {
+  padding: 5px !important;
+  /* width: 413px; */
+}
+
+.carsTable-cardimg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 250px;
+}
+.carsTable-cardimg img {
+  border-radius: 8px;
+}
+.carsTable-carCard-price {
+  display: flex;
+  align-items: center;
+  color: #b83737;
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.carsTable-carCard-topCar-topCategory {
+  font-size: 14px;
+  color: #959595;
+}
+
+.carsTable-carCard-topCar-topCarName {
+  font-size: 95%;
+  color: #727272;
+}
+
+.carsTable-carCard-topCar-topCarName__span {
+  color: #d53535;
+}
+
+.carsTable-carCard-topCar--mid {
+  background-color: #efefef;
+}
+
+.carsTable-shop,
+.carsTable-shop:hover {
+  color: #707070;
+  text-decoration: underline;
+  font-size: 18px;
+}
+
+table {
+  columns: 2;
+}
+
+@media (max-width: 1199.98px) {
+  .carsTable-carCard-price {
+    font-size: 25px;
+  }
+
+  .carsTable-carCard-topCar-topCategory {
+    font-size: 16px;
+  }
+  .carsTable-shop,
+  .carsTable-shop:hover {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .carsTable-carCard-price {
+    font-size: 25px;
+  }
+
+  .carsTable-carCard-topCar-topCategory {
+    font-size: 14px;
+  }
+  .carsTable-shop,
+  .carsTable-shop:hover {
+    font-size: 11px;
+  }
+}
+
+/* @media (max-width: 661px) {
+  .carsTable-cardContainer{
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+} */
+@media (max-width: 618px) {
+  .carsTable-cardContainer {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+}
+@media (max-width: 560px) {
+  .carsTable-cardContainer {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+}
+@media (max-width: 500px) {
+  .carsTable-cardContainer {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+}
